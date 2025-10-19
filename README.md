@@ -233,7 +233,7 @@ Retention & Marketing Insights – Younger investors displayed high engagement b
 
 ### Recommendations
 
--- Targeted Marketing by Age Group – Focus marketing and product recommendations toward the 25–34 age segment, the most active investors, while designing tailored onboarding experiences and education campaigns for younger (<25) users to improve retention.
+Targeted Marketing by Age Group – Focus marketing and product recommendations toward the 25–34 age segment, the most active investors, while designing tailored onboarding experiences and education campaigns for younger (<25) users to improve retention.
 
 Diversification Incentives – Encourage users to build balanced portfolios by introducing small incentives (e.g., reduced fees or bonus points) for investing across multiple asset classes such as ETFs and bonds, which show higher retention.
 
