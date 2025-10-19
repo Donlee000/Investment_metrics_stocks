@@ -215,7 +215,7 @@ ORDER BY Avg_Repeat_Purchase_Rate DESC;
 ```
 
 ### Results/Findings
-<img width="1536" height="1024" alt="Investment reporting Image" src="https://github.com/user-attachments/assets/348828ba-c2b9-44a3-a483-8ad495b466e4" />
+<img width="1536" height="1024" alt="metrics_stock_port_data" src="https://github.com/user-attachments/assets/2e356267-6b93-40d2-b53d-e309eb74db1e" />
 
 The analysis results are summarized as follows:
 
