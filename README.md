@@ -101,6 +101,7 @@ ORDER BY Avg_Repeat_Purchase_Rate DESC;
 ```
 
 5. Show top 5 users and breakdown of assets they trade
+```sql
 
 SELECT TOP (5) WITH TIES
     User_ID,
@@ -113,7 +114,10 @@ WHERE User_ID IS NOT NULL
 GROUP BY User_ID, Age
 ORDER BY COUNT(*) DESC, SUM(Purchase_Value) DESC;
 ```
+
 6. ROI % and Autopilot Vault qualification
+```sql
+
 SELECT 
     User_ID,
     Asset_Type,
