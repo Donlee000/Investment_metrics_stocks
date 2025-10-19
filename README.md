@@ -29,7 +29,7 @@ My analysis code/features i worked with:
 
 1. Age groups investing in asset classes
 ```sql
-*
+
   SELECT 
     CASE 
         WHEN Age < 20 THEN 'Below 20'
@@ -56,9 +56,11 @@ GROUP BY
 ORDER BY Age_Group, Total_Invested DESC;
 ```
 
---- Investment retention trends (holding period)
+2. Investment retention trends (holding period)
+```sql
 
-SELECT 
+SELECT
+
     Asset_Type,
     AVG(Retention_Days) AS Avg_Holding_Days,
     MIN(Retention_Days) AS Min_Holding_Days,
@@ -67,8 +69,11 @@ FROM [Footyballer].[dbo].[Investment_metrics]
 WHERE Retention_Days IS NOT NULL
 GROUP BY Asset_Type
 ORDER BY Avg_Holding_Days DESC;
+```
 
---- Purchase frequency & volume (new vs repeat investors)
+3. Purchase frequency & volume (new vs repeat investors)
+```sql
+
 SELECT 
     User_ID,
     COUNT(TransactionID) AS Total_Transactions,
@@ -80,8 +85,11 @@ SELECT
 FROM [Footyballer].[dbo].[Investment_metrics]
 GROUP BY User_ID
 ORDER BY Total_Transactions DESC;
+```
 
---- Insights for targeting & retention
+4. Insights for targeting & retention
+```sql
+
 SELECT 
     Asset_Type,
     AVG(Repeat_Purchase_Rate_pct) AS Avg_Repeat_Purchase_Rate,
@@ -90,8 +98,9 @@ SELECT
 FROM [Footyballer].[dbo].[Investment_metrics]
 GROUP BY Asset_Type
 ORDER BY Avg_Repeat_Purchase_Rate DESC;
+```
 
--- Show top 5 users and breakdown of assets they trade
+5. Show top 5 users and breakdown of assets they trade
 
 SELECT TOP (5) WITH TIES
     User_ID,
@@ -103,8 +112,8 @@ WHERE User_ID IS NOT NULL
   AND LTRIM(RTRIM(User_ID)) <> ''
 GROUP BY User_ID, Age
 ORDER BY COUNT(*) DESC, SUM(Purchase_Value) DESC;
-
--- ROI % and Autopilot Vault qualification
+```
+6. ROI % and Autopilot Vault qualification
 SELECT 
     User_ID,
     Asset_Type,
@@ -118,8 +127,10 @@ FROM [Footyballer].[dbo].[Investment_metrics]
 WHERE Sell_Value IS NOT NULL
 GROUP BY User_ID, Asset_Type
 ORDER BY ROI_Percent DESC;
+```
 
--- Top 5 Asset Types by Total Investment Value
+7. Top 5 Asset Types by Total Investment Value
+```sql
 
 SELECT TOP 5
     Asset_Type,
@@ -129,8 +140,11 @@ SELECT TOP 5
 FROM [Footyballer].[dbo].[Investment_metrics]
 GROUP BY Asset_Type
 ORDER BY Total_Invested DESC;
+```
 
--- Monthly Investment Trends (by Year/Month)
+8. Monthly Investment Trends (by Year/Month)
+```sql
+
 SELECT 
     YEAR(Purchase_Date) AS Year,
     MONTH(Purchase_Date) AS Month,
@@ -140,8 +154,10 @@ FROM [Footyballer].[dbo].[Investment_metrics]
 WHERE Purchase_Date IS NOT NULL
 GROUP BY YEAR(Purchase_Date), MONTH(Purchase_Date)
 ORDER BY Year, Month;
+```
+9. Retention Distribution by Asset Type
+```sql
 
--- Retention Distribution by Asset Type
 SELECT 
     Asset_Type,
     AVG(Retention_Days) AS Avg_Retention_Days,
@@ -151,9 +167,11 @@ FROM [Footyballer].[dbo].[Investment_metrics]
 WHERE Retention_Days IS NOT NULL
 GROUP BY Asset_Type
 ORDER BY Avg_Retention_Days DESC;
+```
 
+10. User Profitability Ranking (Top 10 by ROI)
+```sql
 
--- User Profitability Ranking (Top 10 by ROI)
 SELECT TOP 10
     User_ID,
     SUM(Sell_Value - Purchase_Value) * 100.0 / NULLIF(SUM(Purchase_Value), 0) AS ROI_Percent,
@@ -163,8 +181,11 @@ FROM [Footyballer].[dbo].[Investment_metrics]
 WHERE Sell_Value IS NOT NULL
 GROUP BY User_ID
 ORDER BY ROI_Percent DESC;
+```
 
--- Repeat vs. Churn Analysis by Age Group
+11. Repeat vs. Churn Analysis by Age Group
+```sql
+
 SELECT 
     CASE 
         WHEN Age < 20 THEN 'Below 20'
@@ -187,7 +208,7 @@ GROUP BY
         ELSE '50+'
     END
 ORDER BY Avg_Repeat_Purchase_Rate DESC;
-
+```
 
 
 
