@@ -214,9 +214,33 @@ GROUP BY
 ORDER BY Avg_Repeat_Purchase_Rate DESC;
 ```
 
+### Results/Findings
+<img width="1536" height="1024" alt="Investment reporting Image" src="https://github.com/user-attachments/assets/348828ba-c2b9-44a3-a483-8ad495b466e4" />
 
+The analysis results are summarized as follows:
 
+Age Group Investment Trends – Users aged 25–34 were the most active investors, particularly in stocks and ETFs, while younger users (<25) showed higher interest in crypto assets. Older groups (40+) tended to invest smaller amounts but demonstrated more consistent returns.
 
+Top Performing Asset Classes – Stocks and ETFs accounted for the majority of total investment value, with stocks showing the highest average ROI. Crypto investments had high volatility and shorter holding periods.
 
+Investment Retention (Holding Periods) – The average holding period across all users was 3–5 months, with ETFs and bonds retained the longest. Short-term investors tended to sell within 30–60 days, particularly in high-risk asset types.
+
+Purchase Frequency & Investor Behavior – A subset of users (roughly the top 10%) accounted for a large share of total transactions. Repeat purchase rates were higher among ETF and stock investors, while crypto investors showed higher churn.
+
+ROI & Autopilot Vault Qualification – Approximately 27–30% of users achieved an ROI above 30%, meeting the threshold for Autopilot Vault qualification. These users primarily invested in diversified portfolios with consistent reinvestment patterns.
+
+Retention & Marketing Insights – Younger investors displayed high engagement but low retention, indicating potential for improved long-term investment education. Middle-aged users showed steady growth and loyalty, making them key targets for Wealthyhood’s retention and premium service strategies.
+
+### Recommendations
+
+-- Targeted Marketing by Age Group – Focus marketing and product recommendations toward the 25–34 age segment, the most active investors, while designing tailored onboarding experiences and education campaigns for younger (<25) users to improve retention.
+
+Diversification Incentives – Encourage users to build balanced portfolios by introducing small incentives (e.g., reduced fees or bonus points) for investing across multiple asset classes such as ETFs and bonds, which show higher retention.
+
+Enhanced Retention Strategies – Develop engagement tools such as personalized dashboards showing ROI growth and holding period milestones to motivate users to stay invested longer.
+
+Autopilot Vault Promotion – Highlight success stories and automate qualification tracking for users achieving ROI above 30%, motivating broader adoption of the Autopilot Vault feature.
+
+Data-Driven Product Optimization – Continue to monitor investment patterns through automated SQL reporting and dashboards, enabling the Wealthyhood team to make evidence-based adjustments to marketing, product features, and customer segmentation
 
 
