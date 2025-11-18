@@ -18,7 +18,6 @@ The raw dataset from Wealthyhood contained user investment metrics in varying fo
 
 
 ### Results/Findings
-<img width="1536" height="1024" alt="metrics_stock_port_data" src="https://github.com/user-attachments/assets/2e356267-6b93-40d2-b53d-e309eb74db1e" />
 
 The analysis results are summarized as follows:
 
